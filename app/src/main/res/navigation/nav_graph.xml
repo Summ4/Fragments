@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    xmlns:tools1="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="d.vardanidze.fragment.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools1:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_dashboard"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="d.vardanidze.fragment.fragments.Dashboard"
+        android:label="Dashboard"
+        tools1:layout="@layout/fragment_dashboard">
+
+        <argument
+            android:name="amount"
+            android:defaultValue="-1"
+            app:argType="integer"/>
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="d.vardanidze.fragment.fragments.Notifications"
+        android:label="Notifications"
+        tools1:layout="@layout/fragment_notifications"/>
+    <fragment
+        android:id="@+id/Bean"
+        android:name="d.vardanidze.fragment.fragments.HomeworkFragment"
+        android:label="Lobio"
+        tools1:layout="@layout/bean"/>
+</navigation>
